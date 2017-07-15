@@ -1,16 +1,16 @@
 import React, { Component } from 'react';
 
-import TodotItem from './TodoItem';
+import TodoItem from './TodoItem';
 
 class Todos extends Component {
   
   render() {
-    let todosItems;
+    let todoItems;
     if (this.props.todos){
-       todosItems = this.props.todos.map(todos=>{
+       todoItems = this.props.todos.map(todo=>{
        //console.log(project)
        return (
-         <TodosItem key={todos.title} todo={todo} />
+         <TodoItem key={todo.title} todo={todo} />
        );
     });
   }
@@ -18,8 +18,8 @@ class Todos extends Component {
   // console.log(this.props);
   return (
     <div className="Todos">
-      <h3>Todos List</h3>
-       {todosItems}
+      <h3>Todo List</h3>
+       {todoItems}
     </div>  
     );
   }
